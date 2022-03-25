@@ -1,0 +1,50 @@
+### order 订单接口
+
+### 列表
+GET http://{{host}}/api/om/order/index?access_token={{accessToken}}&expand=item,item.item&payment_
+Accept: application/json
+
+
+### 批量下单
+PUT http://{{host}}/api/om/order-item-business/batch-place-order?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "products": [
+        {
+            "id": 1,
+            "vendor_id": 1,
+            "cost_price": 25
+        },
+        {
+            "id": 2,
+            "vendor_id": 1,
+            "cost_price": 30
+        }
+    ]
+}
+
+### 编辑
+PUT http://{{host}}/api/om/order-item-business/update?access_token={{accessToken}}&id=1
+Content-Type: application/json
+
+{
+    "customized": "11"
+}
+
+### 商品核实
+PUT http://{{host}}/api/om/order-item-business/product-check?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_id": 17,
+    "customized": "11",
+    "remark" : "dddd"
+}
+
+
+
+### 详情
+GET http://{{host}}/api/om/order-item/view?id=:id&access_token={{accessToken}}&id=1&expand=vendor
+
+###

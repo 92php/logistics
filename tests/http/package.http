@@ -1,0 +1,72 @@
+### 获取包裹列表
+GET http://{{host}}/api/wuliu/package/index?access_token={{accessToken}}&expand=line,routes,line.company
+Accept: application/json
+
+### 获取包裹列表(筛选物流公司)
+GET http://{{host}}/api/wuliu/package/index?access_token={{accessToken}}&expand=line,routes,line.company&company_id=:companyId
+Accept: application/json
+
+
+### 筛选包裹列表
+GET  http://{{host}}/api/wuliu/package/index?access_token={{accessToken}}&expand=line,routes&order_number=&pacage_number=&waybill_number=&shop_name=&line_id=
+Accept: application/json
+
+
+### 编辑包裹状态
+PUT http://{{host}}/api/wuliu/package/update?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "status": 1
+}
+
+### 忽略/已处理异常/编辑节点的预估时间
+PUT http://{{host}}/api/wuliu/package-route/process?access_token={{accessToken}}&id=:id
+Content-Type:application/json
+
+{
+    "process_status": 2,
+    "plan_datetime": "2020-04-12 17:56:56",
+    "remark": "忽略该节点异常"
+}
+
+### 包裹发货
+POST http://{{host}}/api/wuliu/package/delivery?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "package_number": "XM8YATE34283",
+    "weight": 10.0
+}
+
+### 包裹批量发货
+POST http://{{host}}/api/wuliu/package/batch-delivery?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "packages": [
+        {
+            "waybill_number": "7984130862",
+            "weight": 91.0
+        }
+    ],
+    "enabled": 1,
+    "max_weight": 1000,
+    "weight_from": 10,
+    "weight_to": 10,
+    "compute_type": 1
+}
+
+### 导出包裹数据为表格
+GET http://{{host}}/api/wuliu/package/to-excel?access_token={{accessToken}}&line_id=:lineId
+Accept: application/json
+
+### 包裹状态数据统计
+GET http://{{host}}/api/wuliu/package/status-options?access_token={{accessToken}}
+Accept: application/json
+
+### 发货统计接口
+GET http://{{host}}/api/wuliu/package/delivery-statistics?access_token={{accessToken}}&beginDate=beginDate&endDate=:endDate
+Accept: application/json
+
+###

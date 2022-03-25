@@ -1,0 +1,104 @@
+### 供应商商品列表
+GET http://{{host}}/api/om/order-item/index?access_token={{accessToken}}
+Accept: application/json
+
+### 供应商商品列表 定制信息模糊查询
+GET http://{{host}}/api/om/order-item/index?access_token={{accessToken}}&extend=Lilly
+Accept: application/json
+
+### 供应商商品列表 付款时间筛选
+GET http://{{host}}/api/om/order-item/index?access_token={{accessToken}}&payment_begin_datetime=2020-05-03&payment_end_datetime=2020-05-03&_format=json
+Accept: application/json
+
+### 供应商商品列表 订单号筛选
+GET http://{{host}}/api/om/order-item/index?access_token={{accessToken}}&number=1620527-2066&_format=json
+Accept: application/json
+
+### 供应商发货
+POST http://{{host}}/api/om/vendor/delivery?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "package_id": 23,
+    "waybill_number": "20200508"
+}
+
+### 包裹号商品关联
+POST http://{{host}}/api/om/vendor/relation-package?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "numbers": "1209157-26901 1634955-3777",
+    "package_id": 8
+}
+
+### 搜索下单商品
+GET http://{{host}}/api/om/order-item/search-place-order?access_token={{accessToken}}&orderIds=2
+Content-Type: application/json
+
+### 商品质检
+POST http://{{host}}/api/om/order-item/product-inspection?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_id": 28,
+    "is_information_match": "1",
+    "is_accord_with": 1,
+    "quantity": 1,
+    "feedback": "",
+    "sku": "sss"
+}
+
+
+### 商品修改定制信息
+PUT http://{{host}}/api/om/order-item/update-customized?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_id": 513,
+    "customized": {
+        "raw": {
+            "name1": "Audrey",
+            "name2": "Abigail",
+            "name3": "Anne",
+            "Variants": "3 beads / 925 sterling silver / M-8.26 inch"
+        },
+        "beads": "10",
+        "color": "",
+        "names": [
+            "Audrey888",
+            "Abigail",
+            "Anne"
+        ],
+        "other": {},
+        "giftBox": false,
+        "material": "92999 sterling silver",
+        "www": "ddd"
+    },
+    "remark": "38"
+}
+
+
+### 商品入库
+POST http://{{host}}/api/om/order-item/batch-warehousing?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_ids": [
+        41946
+    ],
+    "is_pass": 1,
+    "information_feedback": "",
+    "feedback": ""
+}
+
+### 商品忽略
+PUT http://{{host}}/api/om/order-item/ignore?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_id": 41021
+
+}
+
+###

@@ -1,0 +1,20 @@
+
+
+### 列表
+GET http://{{host}}/api/om/part/index?access_token={{accessToken}}&expand=vendor
+Accept: application/json
+
+### 添加
+POST http://{{host}}/api/om/part/upsert?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "sku": "LZJ2001B02YSIXX",
+    "customized":"anna"
+}
+
+### 智能匹配
+GET http://{{host}}/api/om/part/match?access_token={{accessToken}}
+Accept: application/json
+
+###

@@ -1,0 +1,33 @@
+### 供货商商品列表
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor
+Accept: application/json
+
+### 供货商商品列表 筛选商品状态 2=>待接单,5=>待生产,7=>待发货,9=>已完成
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor&status=2
+Accept: application/json
+
+### 供货商商品列表 筛选SKU 支持模糊搜索
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor&sku=LZ
+Accept: application/json
+
+### 供货商商品列表 筛选定制信息 支持模糊搜索 注意区分大小写
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor&extend=jacob
+Accept: application/json
+
+### 供货商商品列表 筛选商品名 支持模糊搜索
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor&product_name=LZ
+Accept: application/json
+
+### 供货商商品列表 筛选订单号 支持模糊搜索
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor&number=15622
+Accept: application/json
+
+### 供货商商品列表 筛选付款时间
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor&payment_begin_datetime=2020-05-02&payment_end_datetime=2020-05-02
+Accept: application/json
+
+### 供货商商品列表 筛选包裹号
+GET http://{{host}}/api/om/order-item-route/index?access_token={{accessToken}}&expand=item,vendor,package&package_number=2020040115201615694
+Accept: application/json
+
+###

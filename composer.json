@@ -1,0 +1,82 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Project Template",
+    "keywords": [
+        "yii2",
+        "framework",
+        "basic",
+        "project template"
+    ],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5.9",
+        "yiisoft/yii2": "~2.0",
+        "yadjet/helpers": "dev-master",
+        "yadjet/yii2-file-upload-behaviors": "dev-master",
+        "yadjet/yii2-date-picker": "dev-master",
+        "yadjet/yii2-ueditor": "dev-master",
+        "yadjet/yii2-ztree": "dev-master",
+        "yadjet/yii2-validators": "dev-master",
+        "yiisoft/yii2-imagine": "~2.2",
+        "phpoffice/phpexcel": "^1.8",
+        "overtrue/pinyin": "~4.0",
+        "yiisoft/yii2-queue": "^2.3",
+        "ext-dom": "*",
+        "symfony/dom-crawler": "^4.4",
+        "guzzlehttp/guzzle": "^6.5",
+        "php-webdriver/webdriver": "^1.8",
+        "ext-json": "*",
+        "codeitnowin/barcode": "^3.0",
+        "mpdf/mpdf": "^8.0",
+        "symfony/string": "^5.0",
+        "symfony/validator": "^5.1"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*",
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.2",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-rest": "^1.2"
+    },
+    "config": {
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    }
+}

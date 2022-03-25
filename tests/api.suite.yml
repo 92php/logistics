@@ -1,0 +1,8 @@
+actor: ApiTester
+modules:
+  enabled:
+    - \Helper\Api
+    - REST:
+        depends: PhpBrowser
+        url: http://192.168.33.147:8002/index.php/api/
+        part: json

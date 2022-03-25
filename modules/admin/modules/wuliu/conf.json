@@ -1,0 +1,60 @@
+{
+    "name": "物流管理",
+    "author": "hiscaler",
+    "version": "0.0.1",
+    "description": "物流数据管理",
+    "url": "",
+    "enabled_api": true,
+    "menus": [
+        {
+            "label": "包裹管理",
+            "url": [
+                "wuliu/package/index"
+            ],
+            "active": "controllerId=package"
+        },
+        {
+            "label": "物流公司管理",
+            "url": [
+                "wuliu/company/index"
+            ],
+            "active": "controllerId=company"
+        },
+        {
+            "label": "物流线路管理",
+            "url": [
+                "wuliu/company-line/index"
+            ],
+            "active": "controllerId=company-line"
+        },
+        {
+            "label": "物流线路路由管理",
+            "url": [
+                "wuliu/company-line-route/index"
+            ],
+            "active": "controllerId=company-line-route"
+        },
+        {
+            "label": "店小秘帐号管理",
+            "url": [
+                "wuliu/dxm-account/index"
+            ],
+            "active": "controllerId=dxm-account"
+        },
+        {
+            "label": "运费模板管理",
+            "url": [
+                "wuliu/freight-template/index"
+            ],
+            "active": "controllerId=freight-template"
+        },
+        {
+            "label": "运费模板计费管理",
+            "url": [
+                "wuliu/freight-template-fee/index"
+            ],
+            "active": "controllerId=freight-template-fee"
+        }
+    ],
+    "depends": []
+}

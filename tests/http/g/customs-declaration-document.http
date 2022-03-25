@@ -1,0 +1,28 @@
+### Create
+POST http://{{host}}/api/g/customs-declaration-document/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "chinese_name": "Chinese name",
+    "english_name": "English name"
+}
+
+### List
+GET http://{{host}}/api/g/customs-declaration-document/index?access_token={{accessToken}}&expand=addresses&email=john@mail.com
+
+### Update
+PATCH http://{{host}}/api/g/customs-declaration-document/update?access_token={{accessToken}}&id=1
+Content-Type: application/json
+
+{
+    "code": "123",
+    "chinese_name": "Chinese name 1",
+    "english_name": "English name 1",
+    "weight": 10,
+    "amount": 1.23
+}
+
+### Delete
+DELETE http://{{host}}/api/g/customs-declaration-document/delete?access_token={{accessToken}}&id=1
+
+###

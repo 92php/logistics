@@ -1,0 +1,17 @@
+{
+    "name": "Shopify",
+    "author": "hiscaler",
+    "version": "0.0.1",
+    "description": "Shopify",
+    "url": "",
+    "menus": [
+        {
+            "label": "店铺管理",
+            "url": [
+                "hub/shopify/shop/index"
+            ],
+            "active": "controllerId=shop"
+        }
+    ],
+    "depends": []
+}

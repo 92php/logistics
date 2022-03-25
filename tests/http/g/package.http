@@ -1,0 +1,9 @@
+### List
+GET http://{{host}}/api/g/package/index?access_token={{accessToken}}&order_number=234,234xx&expand=orders,orders.items,orders.items.product,orders.items.product.customs-declaration-document
+Accept: application/json
+
+###
+
+GET http://{{host}}/api/g/package/index?access_token={{accessToken}}&remaining_delivery_days=10
+
+###

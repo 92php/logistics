@@ -1,0 +1,31 @@
+### 商品出入库列表
+GET http://{{host}}/api/g/warehouse-sheet/index?access_token={{accessToken}}&expand=details,warehouse,details.product,details.rack,details.warehouse,details.warehouse-sheet
+Accept: application/json
+
+
+
+
+### 创建商品出入库记录
+POST http://{{host}}/api/g/warehouse-sheet/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "warehouse_id": 1,
+    "type": 1,
+    "method": 1,
+    "change_datetime": "2019-10-1 10:01:13",
+    "remark": "",
+    "ext_details": [
+        {
+            "rack_id": 1,
+            "block": 0,
+            "product_id": 1,
+            "quantity": 3,
+            "price": "",
+            "safely_quantity": "",
+            "remark": "888"
+        }
+    ]
+}
+
+###

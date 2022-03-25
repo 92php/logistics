@@ -1,0 +1,9 @@
+<OnlineCustomDataType>          
+    <NameCh>{$item->getChineseName()}</NameCh>
+              
+    <NameEn>{$item->getEnglishName()}</NameEn>
+              
+    <DeclaredValue>{$item->getPrice()}</DeclaredValue>
+    <DeclaredCurrency>{$order->getCurrency()}</DeclaredCurrency>
+           
+</OnlineCustomDataType>

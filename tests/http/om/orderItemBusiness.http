@@ -1,0 +1,69 @@
+### 订单业务接口
+
+
+
+
+### 批量下单
+PUT http://{{host}}/api/om/order-item-business/batch-place-order?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "products": [
+        {
+            "id": 1,
+            "vendor_id": 1,
+            "cost_price": 25
+        },
+        {
+            "id": 2,
+            "vendor_id": 1,
+            "cost_price": 30
+        }
+    ]
+}
+
+### 商品核实
+PUT http://{{host}}/api/om/order-item/check?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_id": 1,
+    "customized": {
+        "raw": {
+            "name1": "Audrey",
+            "name2": "Abigail",
+            "name3": "Anne",
+            "Variants": "3 beads / 925 sterling silver / M-8.26 inch"
+        },
+        "beads": "10",
+        "color": "",
+        "names": [
+            "Audrey",
+            "Abigail",
+            "Anne"
+        ],
+        "other": {},
+        "giftBox": false,
+        "material": "92999 sterling silver",
+        "www": "ddd"
+    },
+    "remark": "38"
+}
+
+### 供应商接单和拒接接口
+PUT http://{{host}}/api/om/order-item-business/vendor-order-receiving?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "products": [
+        {
+            "route_id": 32,
+            "is_order_receiving": 0,
+            "reason": "2222"
+        }
+    ]
+}
+
+###
+
+

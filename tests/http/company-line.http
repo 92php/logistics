@@ -1,0 +1,155 @@
+### 物流商线路列表
+GET http://{{host}}/api/wuliu/company-line/index?access_token={{accessToken}}&expand=company,templateFee,templateFee.template
+Accept: application/json
+
+### 筛选物流商线路列表
+GET http://{{host}}/api/wuliu/company-line/index?access_token={{accessToken}}&expand=company&name=&company_id=
+Accept: application/json
+
+### 添加物流商线路
+POST http://{{host}}/api/wuliu/company-line/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "company_id": 1,
+    "name": "new line"
+}
+
+### 编辑物流商线路
+PUT http://{{host}}/api/wuliu/company-line/update?access_token={{accessToken}}&id=:id
+Content-Type: application/json
+
+{
+    "company_id": 2,
+    "name": "change line"
+}
+
+### 删除线路
+DELETE http://{{host}}/api/wuliu/company-line/delete?access_token={{accessToken}}&id=:id
+
+### 线路路由、模板添加表单
+POST http://{{host}}/api/wuliu/company-line/submit?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "line": {
+        "company_id": 1,
+        "name": "line_name",
+        "estimate_days": 2,
+        "country_id" : 4,
+        "remark": "remark"
+    },
+    "templateFee": [
+        {
+            "line_id": 0,
+            "template_id": 0,
+            "min_weight": 1,
+            "max_weight": 10,
+            "first_weight": "",
+            "first_fee": "",
+            "continued_weight": "",
+            "continued_fee": "",
+            "base_fee": 10.00,
+            "fixed_fee": 20.00,
+            "freight_fee_rate": 0.45,
+            "base_fee_rate": 0.25,
+            "remark": "remark"
+        }
+    ],
+    "template": {
+        "company_id": 1,
+        "fee_mode": 2,
+        "remark": "remark"
+    },
+    "lineRoutes": [
+        {
+            "step": 3,
+            "line_id": 0,
+            "event": "event_0",
+            "package_status": 2,
+            "detection_keyword": "detection_keyword",
+            "estimate_days": 2
+        },
+        {
+            "step": 4,
+            "line_id": 0,
+            "event": "event_1",
+            "package_status": 2,
+            "detection_keyword": "detection_keyword",
+            "estimate_days": 1
+        }
+    ]
+}
+
+### 线路路由、模板修改表单
+POST http://{{host}}/api/wuliu/company-line/submit?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "line": {
+        "id": 183,
+        "company_id": 1,
+        "name": "line_name",
+        "estimate_days": 2,
+        "remark": "remark"
+    },
+    "templateFee": {
+        "id": 18,
+        "line_id": 0,
+        "template_id": 0,
+        "min_weight": 1,
+        "max_weight": 10,
+        "first_weight": 2,
+        "first_fee": 2.5,
+        "continued_weight": 2,
+        "continued_fee": 3.5,
+        "base_fee": 10.00,
+        "remark": "remark"
+    },
+    "template": {
+        "id": 26,
+        "company_id": 1,
+        "fee_mode": 1,
+        "remark": "remark"
+    },
+    "lineRoutes": [
+        {
+            "id": 99,
+            "step": 1,
+            "line_id": 183,
+            "event": "event_1",
+            "package_status": 2,
+            "detection_keyword": "abc",
+            "estimate_days": 2
+        },
+        {
+            "id": 100,
+            "step": 4,
+            "line_id": 183,
+            "event": "event_1",
+            "package_status": 2,
+            "detection_keyword": "detection_keyword",
+            "estimate_days": 1
+        },
+        {
+            "id": 101,
+            "step": 21,
+            "line_id": 183,
+            "event": "event_21",
+            "package_status": 2,
+            "detection_keyword": "detection_keyword",
+            "estimate_days": 1
+        },
+        {
+            "id": 105,
+            "step": 43,
+            "line_id": 183,
+            "event": "event_1",
+            "package_status": 2,
+            "detection_keyword": "detection_keyword",
+            "estimate_days": 1
+        }
+    ]
+}
+
+###

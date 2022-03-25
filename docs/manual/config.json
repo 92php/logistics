@@ -1,0 +1,52 @@
+{
+    "author": "hiscaler",
+    "lastModify": "2019年4月22日 14:44:34",
+    "directories": {
+        "default": {
+            "name": "readme",
+            "title": "神州物流系统使用手册",
+            "docs": [
+                {
+                    "name": "readme",
+                    "title": "神州物流系统使用手册"
+                }
+            ]
+        },
+        "dxm-account": {
+            "title": "店小秘账户",
+            "docs": [
+                {
+                    "name": "readme",
+                    "title": "店小秘账户手册"
+                }
+            ]
+        },
+        "company-line": {
+            "title": "物流商设置",
+            "docs": [
+                {
+                    "name": "readme",
+                    "title": "物流商节点设置手册"
+                }
+            ]
+        },
+        "scan-delivery": {
+            "title": "包裹扫描发货",
+            "docs": [
+                {
+                    "name": "readme",
+                    "title": "扫描发货使用手册"
+                }
+            ]
+        },
+        "package": {
+            "title": "包裹物流管理",
+            "docs": [
+                {
+                    "name": "readme",
+                    "title": "包裹物流管理使用手册"
+                }
+            ]
+        }
+    }
+}

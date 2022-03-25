@@ -1,0 +1,25 @@
+###
+GET {{host}}/api/account/view?access_token={{accessToken}}&fields=id,type,username,nickname,real_name&expand=roles
+Accept: application/json
+
+{}
+
+###
+POST http://{{host}}/api/passport/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password",
+    "scene": "account"
+}
+
+###
+GET http://{{host}}/api/member/view?id=:id
+Content-Type: application/json
+
+{
+
+}
+
+###

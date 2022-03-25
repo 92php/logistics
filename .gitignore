@@ -1,0 +1,8 @@
+.idea/
+/vendor
+/messages/*/*.model.php
+
+/spa/node_modules
+/spa/src/je/*/*.js
+/node_modules
+/nbproject/private/

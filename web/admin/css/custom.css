@@ -1,0 +1,29 @@
+/* 自定义样式 */
+.organization {
+    width: 80px;
+}
+
+.platform {
+    width: 60px;
+}
+
+.package-number {
+    width: 120px;
+}
+
+.waybill-number {
+    width: 120px;
+}
+
+.sku {
+    width: 120px;
+}
+
+.full-name {
+    width: 80px;
+}
+
+.currency {
+    width: 60px;
+    text-align: center;
+}

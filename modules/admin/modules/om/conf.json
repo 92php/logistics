@@ -1,0 +1,39 @@
+{
+    "name": "订单流程管理",
+    "author": "Circles",
+    "version": "0.0.1",
+    "description": "订单流程管理",
+    "url": "",
+    "enabled_api": true,
+    "menus": [
+        {
+            "label": "SKU 供应商匹配管理",
+            "url": [
+                "om/sku-vendor/index"
+            ],
+            "active": "controllerId=sku-vendor"
+        },
+        {
+            "label": "包裹管理",
+            "url": [
+                "om/package/index"
+            ],
+            "active": "moduleId=admin.om&&controllerId=package"
+        },
+        {
+            "label": "商品路由管理",
+            "url": [
+                "om/order-item-route/index"
+            ],
+            "active": "controllerId=order-item-route"
+        },
+        {
+            "label": "取消下单记录",
+            "url": [
+                "om/order-item-route-cancel-log/index"
+            ],
+            "active": "controllerId=order-item-route-cancel-log"
+        }
+    ],
+    "depends": []
+}

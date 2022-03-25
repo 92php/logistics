@@ -1,0 +1,33 @@
+### 会员注册
+POST {{host}}/api/passport/register
+Content-Type: application/json
+
+{
+    "scene": "account",
+    "username": "user{{$randomInt}}",
+    "mobile_phone": "13300000{{$randomInt}}",
+    "password": "111111",
+    "confirm_password": "111111"
+}
+
+### 会员登录
+POST {{host}}/api/passport/login
+Content-Type: application/json
+
+{
+    "scene": "account",
+    "username": "{{username}}",
+    "password": "{{password}}"
+}
+
+### 修改密码
+POST {{host}}/api/passport/change-password?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "old_password": "{{password}}",
+    "password": "{{password}}",
+    "confirm_password": "{{password}}"
+}
+
+###

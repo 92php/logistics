@@ -1,0 +1,36 @@
+### 供应商接单和拒接接口
+PUT http://{{host}}/api/om/vendor/receiving?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "products": [
+        {
+            "route_id": 32,
+            "is_order_receiving": 0,
+            "reason": "2222"
+        }
+    ]
+}
+
+### 待生产订单修改为生产中
+PUT http://{{host}}/api/om/vendor/in-production?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "route_ids": [
+        2,
+        3,
+        4,
+        5,
+        6
+    ]
+}
+
+### 订单移除包裹
+PUT http://{{host}}/api/om/vendor/remove-product?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "package_id": 21,
+    "route_id": 9
+}

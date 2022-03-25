@@ -1,0 +1,102 @@
+{
+    "name": "全局基础模块",
+    "author": "hiscaler",
+    "version": "0.0.1",
+    "description": "全局基础模块",
+    "url": "",
+    "enabled_api": true,
+    "menus": [
+        {
+            "label": "仓库管理",
+            "url": [
+                "g/warehouse/index"
+            ],
+            "active": "controllerId=warehouse"
+        },
+        {
+            "label": "商品管理",
+            "url": [
+                "g/product/index"
+            ],
+            "active": "controllerId=product"
+        },
+        {
+            "label": "报关信息",
+            "url": [
+                "g/customs-declaration-document/index"
+            ],
+            "active": "controllerId=customs-declaration-document"
+        },
+        {
+            "label": "标签管理",
+            "url": [
+                "g/tag/index"
+            ],
+            "active": "controllerId=tag"
+        },
+        {
+            "label": "国家管理",
+            "url": [
+                "g/country/index"
+            ],
+            "active": "controllerId=country"
+        },
+        {
+            "label": "第三方认证配置",
+            "url": [
+                "g/third-party-authentication/index"
+            ],
+            "active": "controllerId=third-party-authentication"
+        },
+        {
+            "label": "店铺管理",
+            "url": [
+                "g/shop/index"
+            ],
+            "active": "controllerId=shop"
+        },
+        {
+            "label": "供应商管理",
+            "url": [
+                "g/vendor/index"
+            ],
+            "active": "controllerId=vendor"
+        },
+        {
+            "label": "客户管理",
+            "url": [
+                "g/customer/index"
+            ],
+            "active": "controllerId=customer"
+        },
+        {
+            "label": "订单管理",
+            "url": [
+                "g/order/index"
+            ],
+            "active": "controllerId=order"
+        },
+        {
+            "label": "订单商品管理",
+            "url": [
+                "g/order-item/index"
+            ],
+            "active": "controllerId=order-item"
+        },
+        {
+            "label": "包裹管理",
+            "url": [
+                "g/package/index"
+            ],
+            "active": "controllerId=package"
+        },
+        {
+            "label": "同步任务管理",
+            "url": [
+                "g/sync-task/index"
+            ],
+            "active": "controllerId=sync-task"
+        }
+    ],
+    "depends": []
+}

@@ -1,0 +1,33 @@
+### dxm账户列表
+GET http://{{host}}/api/wuliu/dxm-account/index?access_token={{accessToken}}
+Accept: application/json
+
+### 筛选dxm账户列表
+GET http://{{host}}/api/wuliu/dxm-account/index?access_token={{accessToken}}&name=
+Accept: application/json
+
+### 添加dxm账户
+POST http://{{host}}/api/wuliu/dxm-account/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "username": "shuke",
+    "password": "shuke",
+    "company_id": 1
+}
+
+### 编辑dxm账户
+PUT http://{{host}}/api/wuliu/dxm-account/update?access_token={{accessToken}}&id=3
+Content-Type: application/json
+
+{
+    "username": "shuke",
+    "password": "123456",
+    "company_id": 2
+}
+
+### 搜索某平台的店小秘账号
+GET http://{{host}}/api/wuliu/dxm-account/index?access_token={{accessToken}}&platform_id=:platformId
+Accept: application/json
+
+###

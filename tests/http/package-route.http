@@ -1,0 +1,35 @@
+### 批量修改包裹路由节点预测时间
+POST http://{{host}}/api/wuliu/package-route/batch-change-plan-datetime?access_token={{accessToken}}&packageId=12
+Content-Type: application/json
+
+{
+    "routes": [
+        {
+            "id": "1",
+            "days": 2
+        },
+        {
+            "id": "2",
+            "days": 1
+        }
+    ]
+}
+
+### 批量修改包裹路由节点预测时间 （错误测试）
+POST http://{{host}}/api/wuliu/package-route/batch-change-plan-datetime?access_token={{accessToken}}&packageId=12
+Content-Type: application/json
+
+{
+    "routes": [
+        {
+            "id": "1",
+            "days": 2
+        },
+        {
+            "id": "15",
+            "days": 1
+        }
+    ]
+}
+
+###

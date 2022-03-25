@@ -1,0 +1,139 @@
+/*
+Document   : login
+Created on : 2018-02-18 21:32:24
+Author     : hiscaler <hiscaler@gmail.com>
+Description: 登录样式
+*/
+body {
+    background: #cadff0 url(../images/login/body.jpg) no-repeat;
+    font: 13px/1.5 \5FAE\8F6F\96C5\9ED1, tahoma, arial, \5b8b\4f53, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: #585858;
+    list-style: none;
+    margin-top: 5px;
+}
+
+#logo {
+    margin: 10% auto 0 auto;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#in {
+    background: url(../images/login/form.png) no-repeat;
+    height: 282px;
+    margin: 0 auto;
+    width: 633px;
+}
+
+#left {
+    background: url(../images/login/logo.png) no-repeat;
+    display: inline;
+    float: left;
+    height: 143px;
+    margin: 80px 0 0 77px;
+    width: 132px;
+}
+
+#right {
+    float: left;
+    position: relative;
+    width: 350px;
+}
+
+#right .no-verify-code {
+    padding-top: 32px;
+}
+
+#right ul {
+    _margin-top: 40px;
+    margin-top: 50px;
+}
+
+#right li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: block;
+}
+
+#right li.has-error input {
+    border-color: #c60000;
+}
+
+#right li.field-loginform-verify_code #loginform-verify_code-image {
+    position: absolute;
+    margin-top: 0;
+}
+
+#right label {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#right .field-loginform-remember_me {
+    display: inline-block;
+}
+
+#right .field-loginform-remember_me label {
+    width: 100px;
+}
+
+#right .field-loginform-remember_me label input {
+    vertical-align: middle;
+}
+
+#right .button {
+    background: url(../images/login/button.gif) no-repeat;
+    border: none;
+    height: 30px;
+    width: 90px;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+#right input.form-control {
+    height: 24px;
+    line-height: 24px;
+    padding: 2px 5px;
+    border: #7db6c7 solid 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#right input#loginform-verify_code {
+    width: 66px;
+    margin-right: 0;
+    text-align: center;
+}
+
+#right input.error {
+    border: red solid 1px;
+}
+
+.help-block {
+    color: #c60000;
+    padding-left: 62px;
+    margin-top: 5px;
+}
+
+#footer {
+    bottom: 0;
+    color: #608caf;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}

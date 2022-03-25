@@ -1,0 +1,32 @@
+### 仓库取消下单
+POST http://{{host}}/api/om/order-item-route-cancel-log/cancel?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "order_item_route_id": 33,
+    "canceled_reason": "canceled reason",
+    "canceled_quantity": 2
+}
+
+### 供应商拒绝取消
+POST http://{{host}}/api/om/order-item-route-cancel-log/vendor-confirm-cancel?access_token={{accessToken}}&id=3
+Content-Type: application/json
+
+{
+    "confirmed_message": "reject message",
+    "confirmed_status": 2
+}
+
+### 供应商同意取消
+POST http://{{host}}/api/om/order-item-route-cancel-log/vendor-confirm-cancel?access_token={{accessToken}}&id=4
+Content-Type: application/json
+
+{
+    "confirmed_status": 1
+}
+
+### 供应商查看申请取消列表
+GET http://{{host}}/api/om/order-item-route-cancel-log/index?access_token={{accessToken}}&confirmed_status=&expand=route,route.item
+Accept: application/json
+
+###

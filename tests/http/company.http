@@ -1,0 +1,33 @@
+### 物流商列表
+GET http://{{host}}/api/wuliu/company/index?access_token={{accessToken}}
+Accept: application/json
+
+### 筛选物流商列表
+GET http://{{host}}/api/wuliu/company/index?access_token={{accessToken}}&name=
+Accept: application/json
+
+### 添加物流商
+POST http://{{host}}/api/wuliu/company/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "name": "顺丰国际",
+    "mobile_phone": "13695248963",
+    "linkman": "Si Li",
+    "website_url": "https://shunfeng.com",
+    "code": "shunfeng"
+}
+
+### 编辑物流商
+POST http://{{host}}/api/wuliu/company/create?access_token={{accessToken}}&id=:id
+Content-Type: application/json
+
+{
+    "name": "顺丰国际",
+    "mobile_phone": "13695248963",
+    "linkman": "Si Li",
+    "website_url": "https://shunfeng.com",
+    "code": "shunfeng"
+}
+
+###

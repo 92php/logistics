@@ -1,0 +1,60 @@
+### SKU 供应商接口
+
+### 列表
+GET http://{{host}}/api/om/sku-vendor/index?access_token={{accessToken}}&expand=vendor
+Accept: application/json
+
+### 添加
+POST http://{{host}}/api/om/sku-vendor/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "sku": "LCC04273MN94597",
+    "vendor_id": 1,
+    "cost_price": 100,
+    "production_min_days": 1,
+    "production_max_days": 7,
+    "enabled": 1,
+    "remark": "测试"
+}
+
+### 批量添加
+POST http://{{host}}/api/om/sku-vendor/batch-create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "sku": "LCC04273MN94591",
+    "vendors": [
+        {
+            "vendor_id": 1,
+            "cost_price": 100,
+            "production_min_days": 1,
+            "production_max_days": 7,
+            "enabled": 1,
+            "remark": "测试"
+        },
+        {
+            "vendor_id": 2,
+            "cost_price": 102,
+            "production_min_days": 4,
+            "production_max_days": 7,
+            "enabled": 1,
+            "remark": "测试2"
+        }
+    ]
+}
+
+### 删除
+DELETE http://{{host}}/api/om/sku-vendor/delete?access_token={{accessToken}}&id=:id
+
+### 编辑
+PUT http://{{host}}/api/om/sku-vendor/update?access_token={{accessToken}}&id=1
+Content-Type: application/json
+
+{
+    "sku": "LCC04273MN94597",
+    "vendor_id": 1
+}
+
+### 详情
+GET http://{{host}}/api/om/sku-vendor/view?id=:id&access_token={{accessToken}}&id=1&expand=vendor

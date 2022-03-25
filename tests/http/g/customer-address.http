@@ -1,0 +1,31 @@
+### Create
+POST http://{{host}}/api/g/customer-address/create?access_token={{accessToken}}
+Content-Type: application/json
+
+{
+    "customer_id": 2,
+    "email": "john1@mail.com",
+    "first_name": "John",
+    "last_name": "Mark",
+    "currency": "usd"
+}
+
+### List
+GET http://{{host}}/api/g/customer-address/index?access_token={{accessToken}}&email=john@mail.com
+
+### Update
+PATCH http://{{host}}/api/g/customer-address/update?access_token={{accessToken}}&id=1
+Content-Type: application/json
+
+{
+    "platform_id": 1,
+    "email": "hiscaler@mail.com",
+    "first_name": "shu",
+    "last_name": "zi",
+    "currency": "rmb"
+}
+
+### Delete
+DELETE http://{{host}}/api/g/customer-address/delete?access_token={{accessToken}}&id=1
+
+###
